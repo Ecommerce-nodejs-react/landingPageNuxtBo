@@ -12,7 +12,7 @@ const BodyContent =()=>{
 
     const [contries, setContries]=useState([])
     useEffect(()=>{
-        var url = 'http://restcountries.eu/rest/v2/lang/es';
+        var url = 'https://restcountries.eu/rest/v2/region/americas';
         fetch(url)
         .then(data=>data.json())
         .then(res=>{
@@ -78,7 +78,9 @@ const BodyContent =()=>{
             </section>
             <section className="bg-red-200 h-screen">
             <div className="bg-white w-full text-left ml-20">
+                <span className="font-bold">contries</span>
                 <ul>
+
                     {
                         contries.map((d,i)=>{
                             return <li>{d.name}</li>
