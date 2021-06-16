@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
 import iphoneImg from '../../assets/iphone.png';
 import subirCatalogos from '../../assets/subirCatalogos.png';
@@ -7,8 +7,22 @@ import imgMobileOwner from '../../assets/mobileOwner.png';
 import './bodyContend.css'
 
 
+
 const BodyContent =()=>{
 
+    const [contries, setContries]=useState([])
+    useEffect(()=>{
+        var url = 'http://restcountries.eu/rest/v2/lang/es';
+        fetch(url)
+        .then(data=>data.json())
+        .then(res=>{
+            console.log(res);
+            setContries(res)
+        })
+        .catch(err=>{
+            console.log(err)
+        })
+    },[])
     return(
         <div>
             <section className=" bg-white h-auto sm:h-screen " style={{zIndex:0}} >
@@ -63,7 +77,15 @@ const BodyContent =()=>{
                 </div>
             </section>
             <section className="bg-red-200 h-screen">
-
+            <div className="bg-white w-full text-left ml-20">
+                <ul>
+                    {
+                        contries.map((d,i)=>{
+                            return <li>{d.name}</li>
+                        })
+                    }
+                </ul>
+            </div>
             </section>
             <section className="bg-indigo-200 h-screen">
 
