@@ -1,0 +1,40 @@
+#text-online{
+    -webkit-text-stroke: 1px rgb(10, 241, 191);
+    /* color:transparent; */
+}
+
+/* btn empezar */
+#btn-empezar{
+    color:rgb(248, 245, 245);
+    background-color: #00ecff;
+    background-image: linear-gradient(160deg, #00ecff 0%, #da02ff 50%, #7749ff 100%);
+    animation-name: changeColor;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    /* animation-delay: -2s; */
+    transition: border-color 2s, background-image 4s;
+}
+@keyframes changeColor {
+    0% {
+        border-color: #0093E9;
+        border-color: linear-gradient(160deg, #2b00e9 0%, #d600d6 100%);
+    }
+    25%{
+        border-color: linear-gradient(160deg, #e90080 0%, #6c04f3 100%);
+    }
+    50%{
+        border-color: linear-gradient(160deg, #2508c9 0%, #d406a8 100%);
+    }
+    to{
+        border-color: linear-gradient(160deg, #e90080 0%, #6c04f3 100%);
+    }
+}
+
+#btn-empezar:hover{
+    color:white;
+    background-color: #05cbda;
+background-image: linear-gradient(160deg, #07c7d4 0%, #ae06cc 50%, #490ff7 100%);
+
+
+}
+/* ----------- */
