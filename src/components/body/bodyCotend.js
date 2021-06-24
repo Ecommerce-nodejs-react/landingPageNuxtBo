@@ -19,7 +19,8 @@ const BodyContent =()=>{
                     <h1 id="title-navbar " className="font-extrabold text-5xl  z-10">NuxtBo  </h1>
                     <div className="my-auto justify-content text-3xl">👍</div>
                 </div>
-                    <div className="mt-20">{process.env.REACT_APP_NAME_USER?process.env.REACT_APP_NAME_USER:''}</div>
+             
+
 
                 {/* animacion de la burbuja green */}
                 <div id="esfersAmorfa" className=" h-60"></div>
@@ -47,6 +48,10 @@ const BodyContent =()=>{
                         </div>
                     </div>
                 </div>
+
+                <div className="mt-20">{process.env.REACT_APP_NAME_USER?process.env.REACT_APP_NAME_USER:''}</div>
+                <div className="mt-20">{process.env.REACT_APP_NAME_USER2?process.env.REACT_APP_NAME_USER2:'no existe varible env3'}</div>
+                <div className="mt-20">{process.env.REACT_APP_NAME_USER3?process.env.REACT_APP_NAME_USER2:'no existe varible env3'}</div>
             </section>
 
             <section id="section-como-funciona" className=" h-auto  pb-10 pt-24">
