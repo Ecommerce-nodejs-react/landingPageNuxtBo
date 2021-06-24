@@ -14,7 +14,7 @@ const HomePage =()=>{
         <Router>
             <Switch>
                 <Route exact path="/">
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <BodyContent />
                 </Route>
                 <Route  path="*" component={NoFount} />
