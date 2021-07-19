@@ -1,11 +1,12 @@
 import React,{useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
-import iphoneImg from '../../assets/iphone.png';
+import iphoneImg from '../../assets/iphoneSinNoch.png';
 import subirCatalogos from '../../assets/subirCatalogos.png';
 import imgLaptopAndImage from '../../assets/laptopAndMobile.png';
 import imgMobileOwner from '../../assets/mobileOwner.png';
 import './bodyContend.css'
 import FormContactUs from '../contactUs/formContactUse/formContactUs';
+import srcGif  from '../../assets/9012.gif'
 import { Link } from 'react-router-dom';
 
 
@@ -26,7 +27,7 @@ const BodyContent =()=>{
                 <div className="flex flex-col sm:flex-row  justify-between">
                     <div className="w-full sm:w-2/4  mt-10 sm:mt-40  sm:mx-10">
                         <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.6}} className="h-full font-bold">
-                            <h1  className="text-gray-800 text-4xl sm:text-5xl font-black"><span id="text-online" className="text-green-400">Vende en linea</span>  y recibe los pedidos en tu <span className="text-green-600">Whatsapp</span> </h1>
+                            <h1  className="text-gray-800 text-4xl sm:text-5xl font-black"><span id="text-online" className="text-green-400">Vende en linea</span>  y recibe los pedidos en tu <span id="text-online" className="text-green-500">Whatsapp</span> </h1>
                             <h2 className="text-gray-500 text-lg mt-4">Toma el control de tus ventas y obten 100% de tus ingresos</h2>
                             <h3 className="text-gray-500 text-lg">Crea tu catalogo de porductos o una tienda en linea</h3>
                             <div className="hidden sm:inline">
@@ -39,9 +40,14 @@ const BodyContent =()=>{
                         </motion.div>
                     </div>
                     <div className="w-full sm:w-2/4">
-                        <motion.div initial={{opacity:0,x:-200}} animate={{opacity:1, x:0}} transition={{duration:1.0}} className="mx-auto">
-                            <img className="mx-auto" src={iphoneImg} width="300" height="300" alt="" />
-
+                        <motion.div id="content-demo" initial={{opacity:0,x:-200}} animate={{opacity:1, x:0}} transition={{duration:1.0}} className="mx-auto">
+                            <div id="container">
+                                <div id="content-img-demo">
+                                    <img  className="mx-auto" src={iphoneImg} width="280" height="400" alt="" />
+                                </div>
+                                <img src={srcGif} className="mx-auto pt-4" width="258" height="400" alt="" />
+                                {/* <video  className="mx-auto my-auto pt-5"  width="260" height="800"  autoPlay loop src={srcViddeo} /> */}
+                            </div>
                         </motion.div>
 
                         <div  className="flex justify-center sm:hidden mt-10">
@@ -253,6 +259,10 @@ const BodyContent =()=>{
              
                 </div>
                 </div>
+            </section>
+
+            <section>
+     
             </section>
 
             {/* form contact us */}
