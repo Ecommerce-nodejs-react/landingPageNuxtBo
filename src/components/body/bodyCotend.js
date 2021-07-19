@@ -6,7 +6,6 @@ import imgLaptopAndImage from '../../assets/laptopAndMobile.png';
 import imgMobileOwner from '../../assets/mobileOwner.png';
 import './bodyContend.css'
 import FormContactUs from '../contactUs/formContactUse/formContactUs';
-import srcGif  from '../../assets/9012.gif'
 import { Link } from 'react-router-dom';
 
 
@@ -45,7 +44,7 @@ const BodyContent =()=>{
                                 <div id="content-img-demo">
                                     <img  className="mx-auto" src={iphoneImg} width="280" height="400" alt="" />
                                 </div>
-                                <img src={srcGif} className="mx-auto pt-4" width="258" height="400" alt="" />
+                                <img src="https://mybuecket-test1.s3.amazonaws.com/9012.gif" className="mx-auto pt-4" width="258" height="400" alt="" />
                                 {/* <video  className="mx-auto my-auto pt-5"  width="260" height="800"  autoPlay loop src={srcViddeo} /> */}
                             </div>
                         </motion.div>
