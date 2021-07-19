@@ -42,10 +42,11 @@ const BodyContent =()=>{
                         <motion.div id="content-demo" initial={{opacity:0,x:-200}} animate={{opacity:1, x:0}} transition={{duration:1.0}} className="mx-auto">
                             <div id="container">
                                 <div id="content-img-demo">
-                                    <img  className="mx-auto" src={iphoneImg} width="280" height="400" alt="" />
+                                    <img  className="mx-auto" src={iphoneImg} width="285" height="400" alt="" />
                                 </div>
-                                <img src="https://mybuecket-test1.s3.amazonaws.com/9012.gif" className="mx-auto pt-4" width="258" height="400" alt="" />
-                                {/* <video  className="mx-auto my-auto pt-5"  width="260" height="800"  autoPlay loop src={srcViddeo} /> */}
+                                {/* <img src="https://mybuecket-test1.s3.amazonaws.com/9012.gif" className="mx-auto pt-4" width="258" height="400" alt="" /> */}
+                             
+                                <video  className="mx-auto my-auto pt-4" type="video/mp4"  width="260" height="800"  autoPlay loop src="https://mybuecket-test1.s3.amazonaws.com/nuxtboVideoDemo.mp4" />
                             </div>
                         </motion.div>
 
