@@ -1,14 +1,16 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 
 import {motion} from 'framer-motion';
-import axios from 'axios';
-
 import {Link, useParams} from 'react-router-dom';
+import axios from 'axios';
+import URL from '../../config/configServer'
+
 import Marca from '../../marca/marca';
 import imgForm from '../../../assets/DayflowTorso.png';
 import './formContactUs.css';
 import codePaisArea from '../../../utils/codePaisArea/codePaisArea.json'
 import { div } from 'prelude-ls';
+import configMessageWhatsappWeb  from '../../../utils/configWhatsapp/configWhatsapp';
 
 const FormContactUs =()=>{
 
@@ -17,19 +19,39 @@ const FormContactUs =()=>{
     console.log(plan?plan:'');
 
 
+    // name       : String,
+    // lastName   : String,
+    // nameShope : String,
+    // country    : Object,
+    // phoneNumber: Number,
+    // callingCode:String,
+    // questionnaire:Object,
+
+    const [stateReques, setsStateRequest]  = useState('');
+    
+    useEffect(() => {
+        const storageD = JSON.parse(localStorage.getItem('requestData'));
+        if(storageD!=null){
+            setsStateRequest(storageD)
+        }
+    }, []);
+    
+    
+
     const [data, setData] = useState({
-        nameOwner:'',
-        lastNameOwner:'',
+        name:'',
+        lastName:'',
+        nameShope:'',
         country:{},
         phoneNumber:'',
         callingCode:'',
-        nameShope:'',
         haveShop:'',
         whatSell:'',
-        whatUseApp:''   
+        whatUseApp:'',
+        plan:plan?plan:'plan no especificado'   
 
     });
-    const [country, setConutry] = useState('');
+    const [message, setMessage] = useState('');
 
         
 
@@ -55,10 +77,11 @@ const FormContactUs =()=>{
     }
     const [alert, setAlert] =useState(false)
 
-    const sendData=()=>{
+    const sendData=async()=>{
+        console.log(data)
         if(
-            data.nameOwner !='' &&
-            data.lastNameOwner !='' &&
+            data.name !='' &&
+            data.lastName !='' &&
             JSON.stringify(data.country) !='{}' &&
             data.phoneNumber !='' &&
             data.callingCode !='' &&
@@ -67,9 +90,44 @@ const FormContactUs =()=>{
             data.whatSell !='' &&
             data.whatUseApp !=''
         ){
+
             console.log("los datos son completos")
+            var url = URL.UrlRequestShop;
+            var params ={
+                method:'POST',
+                url:url,
+                headers:{
+                    'Content-Type':'Application/json'
+                },
+                data:JSON.stringify(data)
+            }
+            var  result = await axios( url, params);
+           
+            console.log(result);
+            if(result.status===200){
+                configMessageWhatsappWeb(result.data.resuld)
+                setsStateRequest(
+                    result.data.resuld
+                )
+                setData({
+                    name:'',
+                    lastName:'',
+                    nameShope:'',
+                    country:{},
+                    phoneNumber:'',
+                    callingCode:'',
+                    haveShop:'',
+                    whatSell:'',
+                    whatUseApp:'',
+                    plan: ''
+                })
+                var dataR= JSON.stringify(result.data.resuld)
+                localStorage.setItem('requestData',dataR)
+            }
+
         }else{
             console.log("complete los campos requeridos");
+            setMessage('Complete los campos requeridos');
             showAlert()
         }
     }
@@ -79,6 +137,14 @@ const FormContactUs =()=>{
         setTimeout(()=>{
             setAlert(false)
         },6000)
+    }
+
+    const componentAlert=()=>{
+        return(
+            <div className="">
+                <motion.div initial={{opacity:0,y:60}} animate={{opacity:1, y:0}} transition={{delay:0.2}} className="bg-red-200 text-red-900 rounded-lg p-2">{message}</motion.div>
+            </div>
+        )
     }
 
     return(
@@ -101,7 +167,7 @@ const FormContactUs =()=>{
                             <input 
                                 onChange={(e)=>handleData(e)}
                                 className=" border border-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent rounded-full mb-3 w-full py-1 pl-2"
-                                type="text" name="nameOwner" id="name" placeholder="Tú nombre" 
+                                type="text" name="name" id="name" placeholder="Tú nombre" 
 
                             />
                         </div>
@@ -110,7 +176,7 @@ const FormContactUs =()=>{
                             <input 
                                 onChange={(e)=>handleData(e)}
                                 className="border border-gray-500 focus:outline-none focus:ring-2 focus:ring-purple-600 rounded-full mb-3 w-full py-1 pl-2"
-                                type="text" name="lastNameOwner" id="" placeholder="Tú apellido" 
+                                type="text" name="lastName" id="" placeholder="Tú apellido" 
                             />
                         </div>
 
@@ -217,9 +283,7 @@ const FormContactUs =()=>{
                         </div>
                         {
                             alert?
-                            <div className="">
-                                <motion.div initial={{opacity:0,y:60}} animate={{opacity:1, y:0}} transition={{delay:0.2}} className="bg-red-200 text-red-900 rounded-lg p-2">Complete los campos requeridos</motion.div>
-                            </div>
+                            componentAlert()
                             :
                             <div className="p-5"></div>
                         }
@@ -233,6 +297,15 @@ const FormContactUs =()=>{
                              Contactactar ahora
                             </motion.div>
                         </div>
+
+                        {
+                            stateReques?._id?
+                                <div>
+                                    Tu solicitud se envio conrrectamente
+                                </div>
+                            :
+                            ''
+                        }
                         
                     </form>
                 </div>

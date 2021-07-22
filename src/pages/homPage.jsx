@@ -3,10 +3,12 @@ import {motion} from 'framer-motion';
 import {
     BrowserRouter as Router, Switch, Route, Link, HashRouter, 
 } from 'react-router-dom';
+
 import Navbar from '../components/navbar/navbar';
 import NoFount from '../components/noFont404/noFonut';
 import BodyContent from '../components/body/bodyCotend';
 import FormContactUs from '../components/contactUs/formContactUse/formContactUs';
+import SignUpForm from '../components/signup/signUp';
 
 const HomePage =()=>{
 
@@ -21,6 +23,7 @@ const HomePage =()=>{
                         <BodyContent />
                     </Route>
                     <Route  path="/contactus/:plan?" component={FormContactUs} ></Route>
+                    <Route path="/user/signup/:idrequest" component={SignUpForm}/>
                     <Route  path="*" component={NoFount} />
                 </Switch>
             </Router>
