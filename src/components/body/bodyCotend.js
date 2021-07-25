@@ -106,8 +106,9 @@ const BodyContent =()=>{
                         <h2 className="text-4xl font-extrabold text-white" >¿Como funciona NuxtBo?</h2>
                     </div>
                     <div className="embed-container">
-                        <iframe className="mx-auto" width="640" height="360" allowfullscreen="1"
-                            src="https://www.youtube.com/embed/sX5hzEMMQAI" 
+                        <iframe className="mx-auto"  allowfullscreen="1"
+                            // src="https://www.youtube.com/embed/sX5hzEMMQAI" 
+                            src="https://www.youtube.com/embed/HFfNicNhBz8"
                             title="YouTube video player" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -119,7 +120,7 @@ const BodyContent =()=>{
 
             <section id="section-pacing" className="section-pacing-1 relative bg-gray-00 pb-36">
                 <div id="title-seccion-precing" className="text-white  font-bold text-4xl py-20">
-                    Encuetra el plan adecuado para tu negocio
+                    Encuentra el plan adecuado para tu negocio
                 </div>
                 
                 <div className="container   mx-auto bg-gray-00">
