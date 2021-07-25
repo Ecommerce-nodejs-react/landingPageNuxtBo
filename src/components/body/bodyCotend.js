@@ -29,7 +29,7 @@ const BodyContent =()=>{
                         <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{duration:0.6}} className="h-full font-bold">
                             <h1  className="text-gray-800 text-4xl sm:text-5xl font-black"><span id="text-online" className="text-green-400">Vende en linea</span>  y recibe los pedidos en tu <span id="text-online" className="text-green-500">Whatsapp</span> </h1>
                             <h2 className="text-gray-500 text-lg mt-4">Toma el control de tus ventas y obten 100% de tus ingresos</h2>
-                            <h3 className="text-gray-500 text-lg">Crea tu catalogo de porductos o una tienda en linea</h3>
+                            <h3 className="text-gray-500 text-lg">Crea tu catalogo de productos o una tienda en linea</h3>
                             <div className="hidden sm:inline">
                               <Link to="/contactus/mensual">
                                 <motion.button whileTap={{scale:0.97}}  initial={{opacity:0,y:-200}} animate={{opacity:1,y:0}} id="btn-empezar" className="p-2 mt-3 bg-white shadow-2xl w-60 focus:outline-none border-2 border-green-600 rounded-xl font-bold">
@@ -103,7 +103,7 @@ const BodyContent =()=>{
             <section id="section-video" className=" h-auto">
                 <div className="w-full h-auto py-20">
                     <div>
-                        <h2 className="text-4xl font-extrabold text-white" >¿Como funciona NuxtBo?</h2>
+                        <h2 className="text-4xl font-extrabold text-white" >¿Como funciona Nuxtbo?</h2>
                     </div>
                     <div className="embed-container">
                         <iframe className="mx-auto"  allowfullscreen="1"
@@ -144,7 +144,7 @@ const BodyContent =()=>{
                                                         Tienda en linea conectado a tu Whatsapp.
                                                     </li>
                                                     <li>
-                                                        Interfaz de usuario adaptado a la web y dispositios moviles.
+                                                        Interfaz de usuario adaptado a la web y dispositivos moviles.
                                                     </li>
                                                     <li>
                                                         Sin limite de productos.
@@ -185,10 +185,10 @@ const BodyContent =()=>{
                                                         Tienda en linea conectado a tu Whatsapp.
                                                     </li>
                                                     <li>
-                                                        Interfaz de usuario adaptado a la web y dispositios moviles.
+                                                        Interfaz de usuario adaptado a la web y dispositivos moviles.
                                                     </li>
                                                     <li>
-                                                        Nombre de dominio personaliado .com .shop...
+                                                        Nombre de dominio personalizado .com .shop...
                                                     </li>
                                                     <li>
                                                         Incluye carrito de compras.
@@ -235,7 +235,7 @@ const BodyContent =()=>{
                                                         Tienda en linea conectado a tu Whatsapp.
                                                     </li>
                                                     <li>
-                                                        Interfaz de usuario adaptado a la web y a dispositios moviles.
+                                                        Interfaz de usuario adaptado a la web y a dispositivos moviles.
                                                     </li>
                                                     <li>
                                                         Sin limite de productos.
