@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import {motion} from 'framer-motion';
-import iphoneImg from '../../assets/iphoneSinNoch.png';
+import iphoneImg from '../../assets/iphoneSinNoch5.svg';
 import subirCatalogos from '../../assets/subirCatalogos.png';
 import imgLaptopAndImage from '../../assets/laptopAndMobile.png';
 import imgMobileOwner from '../../assets/mobileOwner.png';

@@ -9,8 +9,9 @@ const VideoDemo =()=>{
     return <>
      <video  
         key="video-demos"
-        className="mx-auto my-auto my-auto pt-4" 
-        type="video/mp4"  width="260" height="800" 
+        poster="https://mybuecket-test1.s3.amazonaws.com/snapshotNuxtbo.png"
+        className="mx-auto my-auto my-auto pt-3 rounded-2xl " 
+        type="video/mp4"  width="262.4" height="800" 
         loop autoPlay muted playsInline
         src="https://mybuecket-test1.s3.amazonaws.com/nuxtboVideoDemo.mp4" />
     </>
