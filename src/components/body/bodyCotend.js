@@ -40,7 +40,7 @@ const BodyContent =()=>{
                         </motion.div>
                     </div>
                     <div className="w-full sm:w-2/4 ">
-                        <motion.div id="content-demo" initial={{opacity:0,x:-200}} animate={{opacity:1, x:0}} transition={{duration:1.0}} className="mx-auto">
+                        <motion.div id="content-demo" initial={{opacity:0,x:-200}} animate={{opacity:1, x:0}} transition={{duration:1}} className="mx-auto">
                             <div id="container">
                                 <div id="content-img-demo">
                                     <img  className="mx-auto" src={iphoneImg} width="285" height="400" alt="" />
@@ -157,8 +157,8 @@ const BodyContent =()=>{
                                     </div>
                                 <div className="my-10">
                                 <Link to="/contactus/plan-mensual">
-                                    <motion.div whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-600 mx-8 text-center">
-                                        Empezar
+                                    <motion.div id="btn-empezar-promo" whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-600 mx-8 text-white text-center">
+                                    👉Empezar
                                     </motion.div>
                                 </Link>
                                 </div>
@@ -204,8 +204,8 @@ const BodyContent =()=>{
                                     </div>
                                 <div className="my-10">
                                 <Link to="/contactus/plan-anual">
-                                    <motion.div whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-600 mx-8 text-center">
-                                        Empezar
+                                    <motion.div id="btn-empezar-promo" whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-600 mx-8 text-white text-center">
+                                    👉Empezar
                                     </motion.div>
                                 </Link>
                                 </div>
@@ -224,8 +224,8 @@ const BodyContent =()=>{
                             <div className="content-card">
                                 <div className="text-center mt-10">
                                     <div id="tile-precing" className="font-extrabold text-xl">Plan promo</div>
-                                        <div className="text-2xl pt-2 font-semibold text-blue-500">12 USD / month</div>
-                                        <div>80 Bs / mes</div>
+                                        <div className="text-2xl pt-2 text-white font-semibold">12 USD / month</div>
+                                        <div className="text-white">80 Bs / mes</div>
                                 </div>
                                     <hr className="border border-b-1 border-green-500 my-5" />
                                     <div className="bg-gray-00 py-10">
@@ -248,8 +248,8 @@ const BodyContent =()=>{
                                     </div>
                                 <div className="my-10">
                                 <Link to="/contactus/plan-promo">
-                                    <motion.div whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-700 mx-8 text-center">
-                                        Empezar
+                                    <motion.div id="btn-empezar-promo" whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-700 mx-8 text-white text-center">
+                                    💪Empezar
                                     </motion.div>
                                 </Link>
                                 </div>

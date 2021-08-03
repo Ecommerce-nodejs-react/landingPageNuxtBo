@@ -179,7 +179,7 @@ const SignUpForm =(props )=>{
         else{
             
 
-            const url = URL.UrlNewUser;
+            const url = URL.UrlAddNewUserAndCreateShop;
             const config = {
                 headers:{
                     'Content-Type':'Application/json'
@@ -253,6 +253,26 @@ const SignUpForm =(props )=>{
                     </div>
             </div>
         </div>
+        )
+    }
+
+    // cuando la tienda ya fue creada 
+    if(requestData?.stateRequest==="approved"){
+
+        return (
+            <div className="w-screen h-screen flex justify-center">
+                <Marca></Marca>
+                <div className="bg-green-300 my-auto h-60 flex justify-center rounded-lg">
+                    <div className="mx-20 my-auto">
+                        <div className="text-white font-bold">Tu tienda online fue creada exitosamente</div>
+                        <div >¡Felicitaciones ahora puedes empezar a vender como un pro 😎!</div>
+                        <div >Este es el link de tu tienda online: 👉
+                                {/* aqui ira e link de la tienda online del cliente*/}
+                            <a className="text-blue-600 pl-3 hover:text-blue-500" href={requestData.urlShop} target="_blank">Ir a mi tienda</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         )
     }
     return (
