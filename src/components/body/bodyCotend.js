@@ -66,16 +66,16 @@ const BodyContent =()=>{
                 <div>
                     {/* <div className="figura"></div> */}
                     <div className="mb-20">
-                        <h1 className="text-3xl text-white mx-1 sm:mx-20 font-bold">NuxtBo es una nueva forma de vender productos en linea y recibir los pedidos en tu Whatsapp</h1>
+                        <h1 className="text-3xl text-white mx-1 sm:mx-20 font-bold">Nuxtbo es una nueva forma de vender productos en línea y recibir los pedidos en tu Whatsapp</h1>
                     </div>
                     <div className=" grid grid-cols-1 lg:grid-cols-3 gap-14 sm:gap-3 p-3 w-full h-auto ">
                         <div className="rounded-lg shadow-2xl   relative  w-full h-full">
                             <div className="mt-14 ml-5 text-left">
                                 <ul className="font-semibold" >
-                                    <li className="text-white"> ✔️ Crea tu catalogo o tienda de productos en linea y Comienza a subir la lista de tus productos</li>
+                                    <li className="text-white"> ✔️ Una vez que obtengas tu tienda online, comienza a subir tu catálogo de productos.</li>
                                 </ul>
                             </div>
-                            <img src={subirCatalogos} alt="" className=" mx-auto md:h-auto sm:w-10/12 md:w-9/12 lg:h-auto lg:w-auto my-auto" />
+                            <img src={subirCatalogos} alt="" className=" mx-auto md:h-auto sm:w-10/12 md:w-9/12 lg:h-auto lg:w-auto my-auto pt-10" />
                             <motion.span id="btn-step" animate={{rotate:360}} transition={{repeat:Infinity, repeatDelay:2}} className="absolute shadow-2xl top-0 left-0  text-white p-2 rounded-xl">Paso 1</motion.span>
                         </div>
                         <div className="relative rounded-lg shadow-2xl mb-10  w-full h-full">
@@ -100,12 +100,12 @@ const BodyContent =()=>{
                 </div>
             </section>
 
-            <section id="section-video" className=" h-auto">
-                <div className="w-full h-auto py-20">
-                    <div>
-                        <h2 className="text-4xl font-extrabold text-white" >¿Como funciona Nuxtbo?</h2>
+            <section id="section-video" className="h-screen sm:h-auto  flex justify-center">
+                <div className="w-full h-auto py-10 pt-20 my-auto">
+                    <div className="pb-10">
+                        <h2 className="text-3xl md:text-4xl font-extrabold text-white" >¿Como funciona Nuxtbo?</h2>
                     </div>
-                    <div className="embed-container">
+                    <div className="embed-container pb-10">
                         <iframe className="mx-auto"  allowfullscreen="1"
                             // src="https://www.youtube.com/embed/sX5hzEMMQAI" 
                             src="https://www.youtube.com/embed/HFfNicNhBz8"
@@ -248,7 +248,7 @@ const BodyContent =()=>{
                                     </div>
                                 <div className="my-10">
                                 <Link to="/contactus/plan-promo">
-                                    <motion.div id="btn-empezar-promo" whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-700 mx-8 text-white text-center">
+                                    <motion.div id="btn-empezar-promo" whileTap={{scale:1.06}} whileHover={{scale:0.95}} className="rounded-full cursor-pointer border border-green-200 mx-8 text-white text-center">
                                     💪Empezar
                                     </motion.div>
                                 </Link>

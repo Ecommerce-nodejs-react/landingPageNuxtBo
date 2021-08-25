@@ -18,7 +18,7 @@ const FormContactUs =()=>{
     var {plan} =useParams();
     console.log(plan?plan:'');
 
-
+    
     // name       : String,
     // lastName   : String,
     // nameShope : String,
@@ -30,6 +30,7 @@ const FormContactUs =()=>{
     const [stateReques, setsStateRequest]  = useState('');
     
     useEffect(() => {
+        window.scrollTo(0,0)
         const storageD = JSON.parse(localStorage.getItem('requestData'));
         if(storageD!=null){
             setsStateRequest(storageD)
